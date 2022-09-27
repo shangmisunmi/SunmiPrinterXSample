@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="model"
+            type="com.sunmi.samples.printerx.ui.vm.FileViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="32px"
+        android:paddingEnd="32px"
+        android:paddingTop="24px">
+
+        <TextView
+            android:id="@+id/file_url"
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:text="@string/text_file_url"
+            android:gravity="center"
+            android:background="@drawable/bg_button"
+            android:onClick="@{()->model.testUrl()}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/file_local"
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:layout_marginTop="24px"
+            android:text="@string/text_file_file"
+            android:gravity="center"
+            android:background="@drawable/bg_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/file_url" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

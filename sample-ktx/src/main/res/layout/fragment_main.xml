@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="32px"
+        android:paddingEnd="32px"
+        android:paddingTop="24px"
+        tools:context=".ui.main.MainFragment">
+
+        <TextView
+            android:id="@+id/tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tip"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/info"
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:layout_marginTop="24px"
+            android:text="@string/title_info"
+            android:gravity="center"
+            android:background="@drawable/bg_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tip" />
+
+        <TextView
+            android:id="@+id/ticket"
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:layout_marginTop="24px"
+            android:text="@string/title_ticket"
+            android:gravity="center"
+            android:background="@drawable/bg_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/info"/>
+
+        <TextView
+            android:id="@+id/label"
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:layout_marginTop="24px"
+            android:text="@string/title_label"
+            android:gravity="center"
+            android:background="@drawable/bg_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ticket"/>
+
+        <TextView
+            android:id="@+id/file"
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:layout_marginTop="24px"
+            android:text="@string/title_file"
+            android:gravity="center"
+            android:background="@drawable/bg_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/label"/>
+
+        <TextView
+            android:id="@+id/cmd"
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:layout_marginTop="24px"
+            android:text="@string/title_command"
+            android:gravity="center"
+            android:background="@drawable/bg_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/file"/>
+
+        <TextView
+            android:id="@+id/cash"
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:layout_marginTop="24px"
+            android:text="@string/title_cash"
+            android:gravity="center"
+            android:background="@drawable/bg_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cmd"/>
+
+        <TextView
+            android:id="@+id/lcd"
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:layout_marginTop="24px"
+            android:text="@string/title_lcd"
+            android:gravity="center"
+            android:background="@drawable/bg_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cash"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

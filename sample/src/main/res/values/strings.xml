@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">PrinterXSample</string>
+
+    <string name="title_info">打印机详情</string>
+    <string name="title_ticket">打印票据</string>
+    <string name="title_label">打印标签</string>
+    <string name="title_file">打印文件</string>
+    <string name="title_command">打印指令</string>
+    <string name="title_cash">钱箱控制</string>
+    <string name="title_lcd">客显控制</string>
+
+    <string name="tip">本Demo用于演示和介绍如何使用PrinterX SDK控制商米设备的打印机打印需要的内容以及和交易相关的外设控制</string>
+    <string name="tip_info">展示已连接在商米设备上的打印机信息，如果有多个打印机可切换当前SDK控制的打印机测试,默认控制商米内置打印机</string>
+    <string name="tip_cmd">指令透传接口集合，用于已经通过指令构建好打印内容的开发者直接使用的接口，目前提供两种指令集ESC/POS和TSPL指令集</string>
+    <string name="tip_bluetooth">如果当前商米设备支持打印，也可以通过内值虚拟蓝牙：InnerPrinter连接通信，使用指令集发送给设备上的商米虚拟蓝牙打印机打印</string>
+
+    <string name="text_change">操作当前的打印机</string>
+    <string name="text_status">状态</string>
+    <string name="text_name">名称</string>
+    <string name="text_type">类型</string>
+    <string name="text_paper">规格</string>
+    <string name="text_cash">钱箱</string>
+
+    <string name="text_ticket_text">打印文本测试</string>
+    <string name="text_ticket_texts">按列打印文本测试</string>
+    <string name="text_ticket_bar">打印条码测试</string>
+    <string name="text_ticket_qr">打印QR码测试</string>
+    <string name="text_ticket_logo">打印图片测试</string>
+    <string name="text_ticket_line">打印分割线测试</string>
+    <string name="text_ticket_all">完整样张打印测试</string>
+    <string name="text_ticket_result">可以获取结果的打印测试</string>
+
+    <string name="text_label_count">打印张数</string>
+    <string name="text_label_test1">打印简单标签</string>
+    <string name="text_label_test2">打印商品标签</string>
+    <string name="text_label_test3">打印品牌标签</string>
+
+    <string name="text_cash_switch">测试打开钱箱</string>
+    <string name="text_cash_status">获取钱箱状态</string>
+
+    <string name="text_lcd_ctrl">客显屏控制</string>
+    <string name="text_lcd_line">显示单行内容</string>
+    <string name="text_lcd_lines">显示多行内容</string>
+    <string name="text_lcd_logo">显示位图内容</string>
+
+    <string name="text_cmd_esc">ESC/POS指令打印样张</string>
+    <string name="text_cmd_tspl">TSPL指令打印样张</string>
+    <string name="text_bluetooth_esc">虚拟蓝牙打印ESC/POS指令</string>
+    <string name="text_bluetooth_tspl">虚拟蓝牙打印TSPL指令</string>
+
+    <string name="text_file_url">指定网络地址文件打印</string>
+    <string name="text_file_file">选择本地文件打印</string>
+</resources>

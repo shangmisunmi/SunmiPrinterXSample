@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="model"
+            type="com.sunmi.samples.printerx.ui.vm.CashViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="32px"
+        android:paddingEnd="32px"
+        android:paddingTop="24px">
+
+        <TextView
+            android:id="@+id/cash_switch"
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:text="@string/text_cash_switch"
+            android:gravity="center"
+            android:background="@drawable/bg_button"
+            android:onClick="@{()-> model.cashSwitch()}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/cash_status"
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:layout_marginTop="24px"
+            android:text="@string/text_cash_status"
+            android:gravity="center"
+            android:background="@drawable/bg_button"
+            android:onClick="@{()->model.status()}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cash_switch" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cash_info"
+            android:layout_width="match_parent"
+            android:layout_height="112px"
+            android:layout_marginTop="24px"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cash_status">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_cash"
+                android:textSize="32px"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{model.cashStatus}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="#1F000000"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

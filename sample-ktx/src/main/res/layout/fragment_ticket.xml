@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="model"
+            type="com.sunmi.samples.printerx.ui.vm.TicketViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="32px"
+        android:paddingEnd="32px"
+        android:paddingTop="24px">
+
+        <TextView
+            android:id="@+id/ticket_text"
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:text="@string/text_ticket_text"
+            android:gravity="center"
+            android:background="@drawable/bg_button"
+            android:onClick="@{()->model.printText()}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/ticket_texts"
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:layout_marginTop="24px"
+            android:text="@string/text_ticket_texts"
+            android:gravity="center"
+            android:background="@drawable/bg_button"
+            android:onClick="@{()->model.printTexts()}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ticket_text" />
+
+        <TextView
+            android:id="@+id/ticket_bar"
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:layout_marginTop="24px"
+            android:text="@string/text_ticket_bar"
+            android:gravity="center"
+            android:background="@drawable/bg_button"
+            android:onClick="@{()->model.printBar()}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ticket_texts" />
+
+        <TextView
+            android:id="@+id/ticket_qr"
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:layout_marginTop="24px"
+            android:text="@string/text_ticket_qr"
+            android:gravity="center"
+            android:background="@drawable/bg_button"
+            android:onClick="@{()->model.printQr()}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ticket_bar" />
+
+
+        <TextView
+            android:id="@+id/ticket_logo"
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:layout_marginTop="24px"
+            android:text="@string/text_ticket_logo"
+            android:gravity="center"
+            android:background="@drawable/bg_button"
+            android:onClick="@{(view)->model.printBitmap(view)}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ticket_qr" />
+
+
+        <TextView
+            android:id="@+id/ticket_line"
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:layout_marginTop="24px"
+            android:text="@string/text_ticket_line"
+            android:gravity="center"
+            android:background="@drawable/bg_button"
+            android:onClick="@{()->model.printLine()}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ticket_logo" />
+
+        <TextView
+            android:id="@+id/ticket_all"
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:layout_marginTop="24px"
+            android:text="@string/text_ticket_all"
+            android:gravity="center"
+            android:background="@drawable/bg_button"
+            android:onClick="@{(view)->model.printTicket(view)}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ticket_line" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:layout_marginTop="24px"
+            android:text="@string/text_ticket_result"
+            android:gravity="center"
+            android:background="@drawable/bg_button"
+            android:onClick="@{(view)->model.printTicketAndListen(view)}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ticket_all" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
