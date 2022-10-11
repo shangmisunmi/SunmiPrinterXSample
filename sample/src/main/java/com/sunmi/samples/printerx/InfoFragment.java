@@ -23,7 +23,9 @@ public class InfoFragment extends Fragment {
 
     private FragmentInfoBinding binding;
     private ArrayAdapter<PrinterSdk.Printer> arrayAdapter;
-    
+    private PrinterSdk.Printer printer = null;
+
+
     public InfoFragment() { super();}
 
 
@@ -49,6 +51,12 @@ public class InfoFragment extends Fragment {
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
 
+            }
+        });
+        binding.change.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                changeSelectPrinter();
             }
         });
         showPrinters();
@@ -81,6 +89,7 @@ public class InfoFragment extends Fragment {
      */
     private void showPrinterInfo(PrinterSdk.Printer printer) {
         try {
+            this.printer = printer;
             binding.infoStatusTxt.setText(printer.queryApi().getStatus().name());
             binding.infoNameTxt.setText(printer.queryApi().getInfo(PrinterInfo.NAME));
             binding.infoTypeTxt.setText(printer.queryApi().getInfo(PrinterInfo.TYPE));
@@ -88,5 +97,9 @@ public class InfoFragment extends Fragment {
         } catch (SdkException e) {
             e.printStackTrace();
         }
+    }
+
+    public void changeSelectPrinter() {
+        ((MainActivity)getActivity()).selectPrinter = printer;
     }
 }
