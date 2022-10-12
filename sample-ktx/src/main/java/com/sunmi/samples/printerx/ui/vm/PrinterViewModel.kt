@@ -32,7 +32,9 @@ class PrinterViewModel : ViewModel() {
 
             override fun onDefPrinter(printer: PrinterSdk.Printer?) {
                 printer?.let {
-                    selectPrinter = it
+                    if(selectPrinter == null) {
+                        selectPrinter = it
+                    }
                 }
             }
 
