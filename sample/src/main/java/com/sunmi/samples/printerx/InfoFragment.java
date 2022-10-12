@@ -53,12 +53,7 @@ public class InfoFragment extends Fragment {
 
             }
         });
-        binding.change.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                changeSelectPrinter();
-            }
-        });
+        binding.change.setOnClickListener(view1 -> changeSelectPrinter());
         showPrinters();
     }
 
@@ -85,7 +80,7 @@ public class InfoFragment extends Fragment {
     }
 
     /**
-     * 打印机详情
+     * 显示选中打印机详情
      */
     private void showPrinterInfo(PrinterSdk.Printer printer) {
         try {
@@ -99,6 +94,9 @@ public class InfoFragment extends Fragment {
         }
     }
 
+    /**
+     * 指定选中的打印机为当前控制的打印机
+     */
     public void changeSelectPrinter() {
         ((MainActivity)getActivity()).selectPrinter = printer;
     }
