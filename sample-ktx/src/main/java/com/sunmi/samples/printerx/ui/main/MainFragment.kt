@@ -19,6 +19,8 @@ class MainFragment : Fragment() {
 
     private lateinit var dataBinding : FragmentMainBinding
 
+    private val viewModel: PrinterViewModel by viewModels()
+
     companion object {
         fun newInstance() = MainFragment()
     }
@@ -68,8 +70,13 @@ class MainFragment : Fragment() {
                 addToBackStack = true
             )
         }
-        val viewModel: PrinterViewModel by viewModels()
+
         context?.let { viewModel.initPrinter(it) }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        viewModel.releaseSdk()
     }
 
 }

@@ -174,6 +174,7 @@ class TicketViewModel : ViewModel(){
             }
 
         })
+        selectPrinter?.lineApi()?.enableTransMode(false)
     }
 
 

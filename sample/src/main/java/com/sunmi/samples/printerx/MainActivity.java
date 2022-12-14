@@ -33,6 +33,12 @@ public class MainActivity extends AppCompatActivity {
         initPrinter();
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        PrinterSdk.getInstance().destroy();
+    }
+
     /**
      * 初始化默认打印机作为待操作的打印设备
      */

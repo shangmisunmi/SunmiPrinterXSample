@@ -149,6 +149,7 @@ public class TicketFragment extends Fragment {
                 //需要监听打印结果时可以开启事务模式,只需要调用一次
                 api.enableTransMode(true);
                 testTicketSampleResult();
+                api.enableTransMode(false);
             } catch (SdkException e) {
                 e.printStackTrace();
             }
