@@ -31,7 +31,7 @@ class PrinterViewModel : ViewModel() {
         PrinterSdk.getInstance().getPrinter(context, object : PrinterSdk.PrinterListen {
 
             override fun onDefPrinter(printer: PrinterSdk.Printer?) {
-                if(printer != null) {
+                if(selectPrinter == null) {
                     selectPrinter = printer
                 }
             }
