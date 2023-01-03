@@ -51,6 +51,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     //Sample implementation sunmi printer library
-    implementation 'com.sunmi:printerx:1.0.9-SNAPSHOT'
+    implementation 'com.sunmi:printerx:1.0.9'
 
 }
