@@ -35,8 +35,8 @@ class MainActivity : AppCompatActivity() {
      */
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId) {
-            R.id.action_log_off-> PrinterSdk.getInstance().log(false)
-            R.id.action_log_on-> PrinterSdk.getInstance().log(true)
+            R.id.action_log_off-> PrinterSdk.getInstance().log(false, null)
+            R.id.action_log_on-> PrinterSdk.getInstance().log(true, null)
             else -> return super.onOptionsItemSelected(item)
         }
         return true

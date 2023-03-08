@@ -70,10 +70,10 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_log_off:
-                PrinterSdk.getInstance().log(false);
+                PrinterSdk.getInstance().log(false, null);
                 break;
             case R.id.action_log_on:
-                PrinterSdk.getInstance().log(true);
+                PrinterSdk.getInstance().log(true, "Test");
                 break;
             default:
                 return super.onOptionsItemSelected(item);
