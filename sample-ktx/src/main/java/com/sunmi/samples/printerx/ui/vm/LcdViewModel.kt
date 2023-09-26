@@ -23,7 +23,7 @@ class LcdViewModel: ViewModel(){
     }
 
     /**
-     * 显示单行内容
+     * 显示单行内容(T1mini\T2mini)
      * 可根据具体情况设置字体大小
      * 可根据显示情况决定是否拉伸字体到屏幕高度
      */
@@ -37,7 +37,7 @@ class LcdViewModel: ViewModel(){
     }
 
     /**
-     * 显示多行内容
+     * 显示多行内容(T1mini\T2mini)
      * 多行内容展示字体大小固定由所在行比例控制
      */
     fun lcdLines() {
@@ -50,7 +50,7 @@ class LcdViewModel: ViewModel(){
     }
 
     /**
-     * 显示位图
+     * 显示位图(T1mini\T2mini)
      * 位图大小需要限制在128*40像素内
      */
     fun lcdLogo(view:View) {
@@ -61,6 +61,18 @@ class LcdViewModel: ViewModel(){
             val bitmap = BitmapFactory.decodeResource(view.context.resources, R.drawable.test, option)
             selectPrinter?.lcdApi()?.config(Command.CLEAR)
             selectPrinter?.lcdApi()?.showBitmap(bitmap)
+        }catch (e:Exception){
+            e.printStackTrace()
+        }
+    }
+
+    /**
+     * 显示价格（D3mini)
+     * showDigital可以显示7位的数字，并可在任意数字后插入位数分割符
+     */
+    fun lcdDigital(view: View) {
+        try {
+            selectPrinter?.lcdApi()?.showDigital("1.3.5.7.9.0.2")
         }catch (e:Exception){
             e.printStackTrace()
         }

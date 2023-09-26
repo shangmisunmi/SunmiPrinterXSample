@@ -41,6 +41,8 @@
     <string name="text_lcd_line">显示单行内容</string>
     <string name="text_lcd_lines">显示多行内容</string>
     <string name="text_lcd_logo">显示位图内容</string>
+    <string name="text_lcd_digital">显示价格内容</string>
+
 
     <string name="text_cmd_esc">ESC/POS指令打印样张</string>
     <string name="text_cmd_tspl">TSPL指令打印样张</string>

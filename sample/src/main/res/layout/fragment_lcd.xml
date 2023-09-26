@@ -54,4 +54,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lcd_lines" />
+    <TextView
+        android:id="@+id/lcd_digital"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:layout_marginTop="24px"
+        android:background="@drawable/bg_button"
+        android:gravity="center"
+        android:text="@string/text_lcd_digital"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lcd_logo" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

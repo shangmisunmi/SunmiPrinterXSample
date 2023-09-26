@@ -73,5 +73,17 @@ public class LcdFragment extends Fragment {
                 e.printStackTrace();
             }
         });
+        binding.lcdDigital.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    LcdApi api = ((MainActivity)getActivity()).selectPrinter.lcdApi();
+                    api.showDigital("1.3.5.7.9.0.1");
+                } catch (SdkException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        });
     }
 }
