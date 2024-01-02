@@ -43,5 +43,5 @@ dependencies {
     implementation "androidx.fragment:fragment:1.5.2"
 
     //Sample implementation sunmi printer library
-    implementation 'com.sunmi:printerx:1.0.13'
+    implementation 'com.sunmi:printerx:1.0.15'
 }
