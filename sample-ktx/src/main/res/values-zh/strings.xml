@@ -11,7 +11,7 @@
     <string name="tip">本Demo用于演示和介绍如何使用PrinterX SDK控制商米设备的打印机打印需要的内容以及和交易相关的外设控制</string>
     <string name="tip_info">展示已连接在商米设备上的打印机信息，如果有多个打印机可切换当前SDK控制的打印机测试,默认控制商米内置打印机</string>
     <string name="tip_cmd">指令透传接口集合，用于已经通过指令构建好打印内容的开发者直接使用的接口，目前提供两种指令集ESC/POS和TSPL指令集</string>
-    <string name="tip_bluetooth">如果当前商米设备支持打印，也可以通过内值虚拟蓝牙：InnerPrinter连接通信，使用指令集发送给设备上的商米虚拟蓝牙打印机打印</string>
+    <string name="tip_bluetooth">如果当前商米设备支持打印，也可以通过内置虚拟蓝牙：InnerPrinter连接通信，使用指令集发送给设备上的商米虚拟蓝牙打印机打印</string>
 
     <string name="text_change">操作当前的打印机</string>
     <string name="text_status">状态</string>
