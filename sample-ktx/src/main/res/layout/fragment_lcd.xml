@@ -3,81 +3,88 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+
         <variable
             name="model"
             type="com.sunmi.samples.printerx.ui.vm.LcdViewModel" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingStart="32px"
-        android:paddingEnd="32px"
-        android:paddingTop="24px">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/lcd_ctrl"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="88px"
-            android:text="@string/text_lcd_ctrl"
-            android:gravity="center"
-            android:background="@drawable/bg_button"
-            android:onClick="@{()-> model.lcdCtrl()}"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_height="match_parent"
+            android:paddingStart="32px"
+            android:paddingTop="24px"
+            android:paddingEnd="32px">
 
-        <TextView
-            android:id="@+id/lcd_line"
-            android:layout_width="match_parent"
-            android:layout_height="88px"
-            android:layout_marginTop="24px"
-            android:text="@string/text_lcd_line"
-            android:gravity="center"
-            android:background="@drawable/bg_button"
-            android:onClick="@{()->model.lcdLine()}"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/lcd_ctrl" />
+            <TextView
+                android:id="@+id/lcd_ctrl"
+                android:layout_width="match_parent"
+                android:layout_height="88px"
+                android:background="@drawable/bg_button"
+                android:gravity="center"
+                android:onClick="@{()-> model.lcdCtrl()}"
+                android:text="@string/text_lcd_ctrl"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/lcd_lines"
-            android:layout_width="match_parent"
-            android:layout_height="88px"
-            android:layout_marginTop="24px"
-            android:text="@string/text_lcd_lines"
-            android:gravity="center"
-            android:background="@drawable/bg_button"
-            android:onClick="@{()->model.lcdLines()}"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/lcd_line" />
+            <TextView
+                android:id="@+id/lcd_line"
+                android:layout_width="match_parent"
+                android:layout_height="88px"
+                android:layout_marginTop="24px"
+                android:background="@drawable/bg_button"
+                android:gravity="center"
+                android:onClick="@{()->model.lcdLine()}"
+                android:text="@string/text_lcd_line"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lcd_ctrl" />
 
-        <TextView
-            android:id="@+id/lcd_logo"
-            android:layout_width="match_parent"
-            android:layout_height="88px"
-            android:layout_marginTop="24px"
-            android:text="@string/text_lcd_logo"
-            android:gravity="center"
-            android:background="@drawable/bg_button"
-            android:onClick="@{(view)->model.lcdLogo(view)}"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/lcd_lines" />
-        <TextView
-            android:id="@+id/lcd_digital"
-            android:layout_width="match_parent"
-            android:layout_height="88px"
-            android:layout_marginTop="24px"
-            android:text="@string/text_lcd_digital"
-            android:gravity="center"
-            android:background="@drawable/bg_button"
-            android:onClick="@{(view)->model.lcdDigital(view)}"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/lcd_logo" />
+            <TextView
+                android:id="@+id/lcd_lines"
+                android:layout_width="match_parent"
+                android:layout_height="88px"
+                android:layout_marginTop="24px"
+                android:background="@drawable/bg_button"
+                android:gravity="center"
+                android:onClick="@{()->model.lcdLines()}"
+                android:text="@string/text_lcd_lines"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lcd_line" />
+
+            <TextView
+                android:id="@+id/lcd_logo"
+                android:layout_width="match_parent"
+                android:layout_height="88px"
+                android:layout_marginTop="24px"
+                android:background="@drawable/bg_button"
+                android:gravity="center"
+                android:onClick="@{(view)->model.lcdLogo(view)}"
+                android:text="@string/text_lcd_logo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lcd_lines" />
+
+            <TextView
+                android:id="@+id/lcd_digital"
+                android:layout_width="match_parent"
+                android:layout_height="88px"
+                android:layout_marginTop="24px"
+                android:background="@drawable/bg_button"
+                android:gravity="center"
+                android:onClick="@{(view)->model.lcdDigital(view)}"
+                android:text="@string/text_lcd_digital"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lcd_logo" />
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </layout>
